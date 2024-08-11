@@ -1,0 +1,54 @@
+@import './antdRest.scss';
+@import './common.scss';
+body {
+    height: 100%;
+    margin: 0;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+    color: $base-theme-text;
+    font-size: 14px;
+}
+
+label {
+    font-weight: 700;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#app {
+    height: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+dl dd {
+    margin-bottom: 0;
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: $base-theme;
+    opacity: .8;
+}

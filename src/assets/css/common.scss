@@ -1,0 +1,212 @@
+/*
+* 遍历 margin
+* 0 - 50 (px)  5或10
+*/
+
+@for $i from 0 through 50 {
+    @if $i % 5==0 {
+        @each $short,
+        $long in l left,
+        t top,
+        r right,
+        b bottom,
+        x (left, right),
+        y (top, bottom) {
+            @if $short==x or $short==y {}
+            @else {
+                .m#{$short}#{$i} {
+                    margin-#{$long}: $i + px!important;
+                }
+            }
+        }
+    }
+}
+
+
+/*
+* 遍历 padding
+* 0 - 30 (px)  5或10
+*/
+
+@for $i from 0 through 30 {
+    @if $i % 5==0 {
+        @each $short,
+        $long in l left,
+        t top,
+        r right,
+        b bottom,
+        x (left, right),
+        y (top, bottom) {
+            @if $short==x or $short==y {}
+            @else {
+                .p#{$short}#{$i} {
+                    padding-#{$long}: $i + px!important;
+                }
+            }
+        }
+    }
+}
+
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url('../fonts/Lato/Lato-Regular.ttf');
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+    cursor: pointer;
+    // color: inherit;
+    text-decoration: none;
+}
+
+a {
+    color: $base-theme;
+}
+
+div:focus {
+    outline: none;
+}
+
+.fr {
+    float: right;
+}
+
+.fl {
+    float: left;
+}
+
+.text-l {
+    text-align: left;
+}
+
+.text-r {
+    text-align: right;
+}
+
+.text-c {
+    text-align: center;
+}
+
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.inline-block-full {
+    display: inline-block;
+    width: 100%;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.inlineBlock {
+    display: block;
+}
+
+.clearfix {
+    &:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+}
+
+.no-padding {
+    padding: 0px !important;
+}
+
+.no-margin {
+    margin: 0px!important;
+}
+
+.app-container {
+    width: 100%;
+    float: left;
+    padding: 20px;
+    background: $base-theme-content-bg;
+    border-radius: $base-theme-border-radius;
+}
+
+.table-wrapper {
+    width: 100%;
+    float: left;
+    .ant-table-cell {
+        font-family: Lato-Regular!important;
+    }
+}
+
+.table-btn-wrapper {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.table-pagination {
+    float: right;
+    margin-top: 20px;
+}
+
+.inline-btn {
+    display: inline-block;
+}
+
+.step-form-layer {
+    width: 600px;
+    margin: 0 auto;
+    .step-form-btn-wrapper {
+        text-align: center;
+        margin-top: 60px;
+    }
+    .step-form-content {
+        margin-top: 50px;
+    }
+}
+
+.detail-content {
+    width: 100%;
+    font-size: 14px;
+    .detail-content-item {
+        width: 100%;
+        padding: 10px 0;
+        label {
+            width: 120px;
+            display: inline-block;
+            text-align: left;
+            font-weight: bold;
+            margin-right: 10px;
+            vertical-align: top;
+        }
+        label.text-right {
+            text-align: right;
+        }
+        .value {
+            width: calc(100% - 130px);
+            display: inline-block;
+            text-align: left;
+            word-wrap: break-word;
+        }
+    }
+}
+
+.line-two-hide {
+    height: 42px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

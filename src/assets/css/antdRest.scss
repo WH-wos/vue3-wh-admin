@@ -1,0 +1,54 @@
+.ant-menu-dark a {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.ant-layout .ant-layout-sider-children {
+    text-align: left;
+}
+
+.search-wrapper .ant-form-item {
+    margin-bottom: 20px;
+}
+
+.table-new-style .ant-table-content table>thead>tr:first-child>*:first-child {
+    border-start-start-radius: $base-theme-border-radius;
+    border-end-start-radius: $base-theme-border-radius;
+}
+
+.table-new-style .ant-table-content table>thead>tr:first-child>*:last-child {
+    border-start-end-radius: $base-theme-border-radius;
+    border-end-end-radius: $base-theme-border-radius;
+}
+
+.table-new-style .ant-table-thead>tr>th {
+    background: #f6f7fb!important;
+}
+
+.ant-list .ant-list-item .ant-list-item-meta .ant-list-item-meta-title>a {
+    color: $base-theme;
+}
+
+.ant-btn-primary {
+    box-shadow: inherit;
+}
+
+.ant-form-item {
+    margin-bottom: 30px;
+}
+
+.card-doc-hide .ant-card-meta-description {
+    height: 42px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ant-menu-inline-collapsed a .ant-menu-item .ant-menu-title-content .menu-title {
+    display: none;
+}
+
+.ant-menu-inline-collapsed a .ant-menu-item {
+    text-align: center;
+}
